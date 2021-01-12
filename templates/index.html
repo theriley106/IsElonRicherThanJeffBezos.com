@@ -41,7 +41,7 @@
                   {% for person in ranking %}
                   <tr>
                      <th scope="row">{{person.rank}}</th>
-                     <td><a style="color: white;" href="https://www.forbes.com/profile/{{person.uri}}">{{person.personName}}</a></td>
+                     <td><a style="color: white;" target="_blank" href="https://www.forbes.com/profile/{{person.uri}}">{{person.personName}}</a></td>
                      <td>{{person.finalWorth | currencyFormat}}</td>
                   </tr>
                   {% endfor %}
