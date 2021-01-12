@@ -1,0 +1,57 @@
+<html>
+   <style>
+      .center-screen {
+      height: 200px;
+      width: 400px;
+      position: fixed;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -200px;
+      }
+   </style>
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   </head>
+   {% if result == true %}
+   <body style="background: #00ff3a;">
+      <div style="background: #00ff3a; 
+         top: 35%;" class="center-screen">
+      <center>
+         <h1 style="color:#004a9a;font-size:80px;" id="result">YES<br>&#128640; &#128200; &#129297;</h1>
+      </center>
+      {% else %}
+      <body style="background:white">
+         <div style="background: white; 
+            top: 40%;" class="center-screen">
+            <center>
+               <h1 style="color:#004a9a;font-size:80px;" id="result">NO<br>&#128532;</h1>
+            </center>
+            {% endif %}
+            <table class="table table-dark table-hover" style="
+               margin-top: 10%;
+               ">
+               <thead>
+                  <tr>
+                     <th scope="col">#</th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Net Worth</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {% for person in ranking %}
+                  <tr>
+                     <th scope="row">{{person.rank}}</th>
+                     <td><a style="color: white;" href="https://www.forbes.com/profile/{{person.uri}}">{{person.personName}}</a></td>
+                     <td>{{person.finalWorth | currencyFormat}}</td>
+                  </tr>
+                  {% endfor %}
+               </tbody>
+            </table>
+         </div>
+   </body>
+   <footer class="page-footer font-small blue fixed-bottom">
+      <div class="text-center py-3">
+         <a href="https://github.com/theriley106/IsElonMuskTheRichestPersonInTheWorld" target="_blank">View on Github</a>
+      </div>
+   </footer>
+</html>
