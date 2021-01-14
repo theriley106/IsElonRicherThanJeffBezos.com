@@ -1,4 +1,4 @@
-<h2 align="center"><a href="http://www.IsElonMuskTheRichestPersonInTheWorld.com">IsElonMuskTheRichestPersonInTheWorld.com</a></h2>
+<h2 align="center"><a href="http://www.IsElonRicherThanJeffBezos.com">IsElonRicherThanJeffBezos.com</a></h2>
 
 ## How is the net worth calculated?
 
